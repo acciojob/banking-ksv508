@@ -1,7 +1,7 @@
 package com.driver;
 
 public class CurrentAccount extends BankAccount{
-    public String tradeLicenseId; //consists of Uppercase English characters only
+    private String tradeLicenseId; //consists of Uppercase English characters only
 
     public String getTradeLicenseId() {
         return tradeLicenseId;
@@ -26,7 +26,7 @@ public class CurrentAccount extends BankAccount{
         // If it is not possible, throw "Valid License can not be generated" Exception
         int n = tradeLicenseId.length();
         int temp = 0;
-        for(int i = 0 ; i < n ; i++){
+        for(int i = 0 ; i < n-1 ; i++){
             if(tradeLicenseId.charAt(i) == tradeLicenseId.charAt(i+1))
                 break;
             else
